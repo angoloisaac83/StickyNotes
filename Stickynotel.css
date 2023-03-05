@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    background: rgba(0, 0, 0, 0.44);
+}
+p{
+    font-size: x-large;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 30%; */
+    align-items: center;
+    padding-bottom: 10px;
+}
+button{
+    background: rgb(255, 217, 0);
+    border: none;
+    padding: 10px 15px;
+}
+.parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    width: 22%;
+    color: white;
+    gap: 20px;
+    padding: 10px 15px;
+    background-color: rgb(49, 46, 46);
+    border-radius: 5px;
+}
+.second{
+    width: 25%;
+    border-radius: 5px;
+    height: 35%;
+    background-color: rgb(49, 46, 46);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    flex-direction: column;
+    margin-left: 20px;
+    padding: 10px;
+}
+textarea{
+    width: 100%;
+    height: 70%;
+    padding-left: 20px;
+    background: transparent;
+    border: none;
+    color: white;
+    box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.24);
+}
+.input{
+    width: 90%;
+}
+.adding{
+    width: 100%;
+    height: fit-content;
+    padding: 10px 10px;
+    border-top: 3px solid rgb(255, 217, 0);
+    background-color: rgba(255, 255, 255, 0.24);
+    cursor: pointer;
+}
+.adding p{
+    font-size: normal;
+    width: fit-content; 
+}
+.search{
+    padding: 10px 25px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.24);
+    border: none;
+}
+.settings{
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    height: 80%;
+    width: 22%;
+    top: 5%;
+    color: black;
+}
+ul{
+    list-style: none;
+
+}
+@media screen and (max-width: 550px) {
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    body{
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px 0px;
+        background: rgba(0, 0, 0, 0.44);
+    }
+    p{
+        font-size: x-large;
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        /* gap: 30%; */
+        align-items: center;
+        padding-bottom: 10px;
+    }
+    button{
+        background: rgb(255, 217, 0);
+        border: none;
+        padding: 10px 15px;
+    }
+    .parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        height: 100%;
+        width: 70%;
+        color: white;
+        gap: 20px;
+        padding: 10px 15px;
+        background-color: rgb(49, 46, 46);
+        border-radius: 5px;
+    }
+    .second{
+        width: 70%;
+        border-radius: 5px;
+        height: 35%;
+        background-color: rgb(49, 46, 46);
+        align-items: center;
+        position: absolute;
+        justify-content: center;
+        box-shadow: 0px 0px 2px 2px white;
+        display: none;
+        flex-direction: column;
+        top: 55%;
+        margin-left: 20px;
+        padding: 10px;
+    }
+    textarea{
+        width: 100%;
+        height: 70%;
+        padding-left: 20px;
+        background: transparent;
+        border: none;
+        color: white;
+        box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.24);
+    }
+    .input{
+        width: 90%;
+    }
+    .adding{
+        width: 100%;
+        height: fit-content;
+        padding: 10px 10px;
+        border-top: 3px solid rgb(255, 217, 0);
+        background-color: rgba(255, 255, 255, 0.24);
+    }
+    .adding p{
+        font-size: normal;
+        width: fit-content; 
+    }
+    .search{
+        padding: 10px 25px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.24);
+        border: none;
+    }
+}

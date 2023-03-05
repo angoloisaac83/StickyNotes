@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky</title>
+    <link rel="stylesheet" href="stickynotel.css">
+</head>
+<body>
+    <!-- parent -->
+    <section class="parent">
+    <nav>
+        <button class="add">
+            Add
+        </button>
+        <button class="setting">
+            Setting
+        </button>
+        <section class="settings">
+            <ul>
+                <li>
+                    <input class="rad" type="radio">
+                    Light
+                </li>
+                <li>
+                    <input class="rads" type="radio">
+                    Dark
+                </li>
+            </ul>
+        </section>
+    </nav>
+    <p>
+        Stickey Notes
+    </p>
+    <span>
+        <input class="search" type="text" placeholder="Search......">
+    </span>
+    <div class="adding">
+        <p class="input">
+
+        </p>
+        <button class="del">
+            Delete
+        </button>
+    </div>
+</section>
+<!-- second  -->
+<section class="second">
+<nav>
+    <button class="add">
+        Add
+    </button>
+    <button class="close">
+        Close
+    </button>
+</nav>
+<textarea title="Take a Note...">
+    
+</textarea>
+<footer>
+
+</footer>
+</section>
+<script>
+    let s = 0
+    let section = document.querySelector('section')
+    let textarea = document.querySelector('textarea')
+    let input = document.querySelector('.input')
+    let submit = document.querySelector('.submit')
+    let second = document.querySelector('.second')
+    let add = document.querySelector('.add')
+    let adding = document.querySelector('.adding')
+    let del = document.querySelector('.del')
+    let rad = document.querySelector('.rad')
+    let rads = document.querySelector('.rads')
+    let settings = document.querySelector('.settings')
+    let closes = document.querySelector('.close')
+// Light and Dark Mode
+let nuh = 0
+rad.addEventListener('click',()=>{
+ nuh +1
+ if (nuh = 1) {
+     section.style.background = 'white'
+ }
+})
+rads.addEventListener('click',()=>{
+    nuh +=1
+    if (nuh = 2) {
+     section.style.background = 'rgb(49, 46, 46)'
+ }
+})
+    // adding func
+
+    add.addEventListener('click',added)
+    function added(){
+        second.style.display = 'flex'
+    s++
+    localStorage.setItem('num',s)
+    textarea.addEventListener('keydown',keys)
+    function keys(){
+        input.textContent = textarea.value
+        localStorage.setItem(s+"st", textarea.value)        
+        if (input.textContent === '') {
+            del.style.display= 'none'
+            adding.style.display = 'none'
+        } else {
+            del.style.display= 'inline'
+            adding.style.display = 'flex'
+        }
+    }
+}
+// closing func
+
+closes.addEventListener('click',closex)
+    function closex(){
+        second.style.display = 'none'
+    }
+    console.log(localStorage.getItem(s+"st"))
+        input.textContent = localStorage.getItem(localStorage.getItem('num')+"st")
+        alert('Updated')
+        // delete func
+
+        del.addEventListener('click',()=>{
+           let enh =  prompt('Are You Sure??')
+           if (enh == 'yes') {
+                localStorage.removeItem(localStorage.getItem('num')+"st")
+            s -1
+            window.location.href = "Stickynotes.html"
+           }
+           
+        })
+        // del btn update
+        
+        if (input.textContent === '') {
+            del.style.display= 'none'
+            adding.style.display = 'none'
+        } else {
+            del.style.display= 'inline'
+            adding.style.display = 'flex'
+        }
+        adding.addEventListener('click',()=>{
+            textarea.value = input.textContent
+            second.style.display = 'flex'
+                textarea.addEventListener('keydown',keys)
+    function keys(){
+        input.textContent = textarea.value
+        localStorage.setItem(s+"st", textarea.value)        
+        if (input.textContent === '') {
+            del.style.display= 'none'
+            adding.style.display = 'none'
+        } else {
+            del.style.display= 'inline'
+            adding.style.display = 'flex'
+        }
+    }
+        })
+</script>
+</body>
+</html>
